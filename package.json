@@ -1,0 +1,12 @@
+{
+  "name": "bsm-fivem-auto-backup",
+  "version": "2.0.0",
+  "description": "Advanced Automated FiveM Database Backup to Discord by Basil Saji Mathew (BSM)",
+  "main": "server.js",
+  "author": "Basil Saji Mathew (BSM)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "form-data": "^4.0.0"
+  }
+}
