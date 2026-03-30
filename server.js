@@ -330,19 +330,50 @@ if (config.discord.webhook_url && config.discord.webhook_url.startsWith('https:/
     bsmWarn('Discord Webhook IS NOT configured properly in config.json.');
 }
 
+// Universal Framework Permission System (ESX, QBCore, Qbox, Standalone)
+async function hasAdminPermission(source) {
+    if (source === 0) return true; // Console always allowed
+    
+    // 1. Native ACE Permissions (Standalone / Best Practice / Qbox)
+    if (IsPlayerAceAllowed(source, 'command.runbackup') || IsPlayerAceAllowed(source, 'admin')) {
+        return true;
+    }
+
+    // 2. QBCore & Qbox native core Permission Check
+    try {
+        if (GetResourceState('qb-core') === 'started') {
+            const QBCore = exports['qb-core'].GetCoreObject();
+            if (QBCore && QBCore.Functions && QBCore.Functions.HasPermission(source, 'admin')) {
+                return true;
+            }
+        }
+    } catch (e) {}
+
+    // 3. ESX Permission Check
+    try {
+        if (GetResourceState('es_extended') === 'started') {
+            const ESX = exports['es_extended'].getSharedObject();
+            if (ESX) {
+                const xPlayer = ESX.GetPlayerFromId(source);
+                if (xPlayer && (xPlayer.getGroup() === 'admin' || xPlayer.getGroup() === 'superadmin')) {
+                    return true;
+                }
+            }
+        }
+    } catch (e) {}
+
+    return false;
+}
+
 // Only register server side command if running under FiveM
 if (typeof RegisterCommand !== 'undefined') {
     RegisterCommand('runbackup', async (source, args, raw) => {
-        if (source === 0) {
+        const isAdmin = await hasAdminPermission(source);
+        if (isAdmin) {
+            if (source !== 0) bsmLog(`Backup manually triggered by user ID ${source}.`);
             await runAllBackups();
         } else {
-            // Check for admin permission
-            if (IsPlayerAceAllowed(source, 'command.runbackup') || IsPlayerAceAllowed(source, 'admin')) {
-                bsmLog(`Backup manually triggered by user ID ${source}.`);
-                await runAllBackups();
-            } else {
-                bsmError(`Access Denied. Command only executable from server console or by Admins.`);
-            }
+            bsmError(`Access Denied [ID: ${source}]. You don't have Admin permissions.`);
         }
     }, true);
 }

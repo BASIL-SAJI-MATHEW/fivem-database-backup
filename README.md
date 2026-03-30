@@ -6,6 +6,7 @@
 [![Author](https://img.shields.io/badge/Author-Basil%20Saji%20Mathew%20(BSM)-blue?style=for-the-badge&logo=github)](https://github.com/)
 [![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/)
 [![FiveM Ready](https://img.shields.io/badge/FiveM-Ready-orange?style=for-the-badge&logo=fivem)](https://fivem.net/)
+[![Frameworks](https://img.shields.io/badge/Frameworks-ESX%20%7C%20Qbox%20%7C%20QBCore%20%7C%20Standalone-blueviolet?style=for-the-badge)](https://fivem.net/)
 [![Discord Integration](https://img.shields.io/badge/Discord-Integrated-7289DA?style=for-the-badge&logo=discord)](https://discord.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE.md)
 
@@ -23,13 +24,14 @@ Built specifically to be SEO-optimized and feature-rich, this script runs seamle
 
 ## 🔥 Advanced Features
 
-*   **Multi-Database Support:** Backup multiple databases (e.g., `essentialmode`, `qbcore`) simultaneously.
+*   **Universal Framework Support:** 100% Plug-and-Play compatibility with **ESX**, **Qbox**, **QBCore**, and **Standalone** frameworks!
+*   **Multi-Database Support:** Backup multiple databases (e.g., `esx_database`, `qbcore_framework`) simultaneously.
 *   **Discord Webhook Integration:** Get real-time notifications with beautifully formatted embeds for both successful and failed backups.
 *   **Targeted Role Mentions:** Optionally ping `@everyone`, `@here`, or specific Admin roles if a backup fails.
 *   **Smart Compression (GZip):** Maximizes local and cloud storage by applying level-9 gzip compression to your SQL dumps.
 *   **Automated Retention Policy:** Keep your disk clean! Automatically deletes backups older than X days based on your configuration.
 *   **Customizable Logging & Aesthetics:** Clean and structured console logs with custom prefixes (`[BSM AutoBackup]`).
-*   **Dynamic Command Trigger:** Trigger backups manually via the in-game/server console using `/runbackup` (secured with Ace permissions).
+*   **Dynamic Command Trigger:** Trigger backups manually via the in-game/server console using `/runbackup` (auto-detects ESX/QBCore/Qbox/Ace Admin permissions).
 *   **Watermarked Security:** Custom built by **Basil Saji Mathew (BSM)** ensuring top-tier script optimization and reliability.
 
 ---
@@ -66,7 +68,7 @@ The config file is designed to be highly intuitive. Here is the default setup cr
         "port": 3306,
         "user": "root",
         "password": "your_secure_password",
-        "databases": ["essentialmode", "qbcore"]
+        "databases": ["esx_database", "qbox_database", "qbcore_database", "standalone_database"]
     },
     "discord": {
         "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
