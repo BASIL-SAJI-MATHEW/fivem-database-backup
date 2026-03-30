@@ -4,7 +4,7 @@
         "port": 3306,
         "user": "root",
         "password": "",
-        "databases": ["essentialmode", "qbcore"]
+        "databases": ["esx_database", "qbox_database", "qbcore_database", "standalone_database"]
     },
     "discord": {
         "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
