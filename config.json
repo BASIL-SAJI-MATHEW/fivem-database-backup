@@ -1,0 +1,32 @@
+{
+    "database": {
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+        "databases": ["essentialmode", "qbcore"]
+    },
+    "discord": {
+        "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
+        "bot_name": "BSM AutoBackup",
+        "avatar_url": "",
+        "ping_role_on_error": false,
+        "embed_color_success": "5814783",
+        "embed_color_error": "16711680"
+    },
+    "backup": {
+        "interval_hours": 12,
+        "compress": true,
+        "compression_level": 9,
+        "mysqldump_path": "mysqldump",
+        "mysqldump_args": ["--single-transaction", "--quick", "--lock-tables=false"],
+        "keep_local_backups": false,
+        "local_backup_folder": "backups",
+        "retention_days": 7
+    },
+    "system": {
+        "log_prefix": "^6[BSM AutoBackup]^0",
+        "debug_mode": false,
+        "author": "Basil Saji Mathew (BSM)"
+    }
+}
