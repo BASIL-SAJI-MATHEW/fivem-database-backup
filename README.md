@@ -1,14 +1,14 @@
 <div align="center">
 
 # 🛡️ BSM FiveM AutoBackup V2 🚀
-**The Ultimate, Most Advanced, & SEO-Optimized Database Backup Solution for FiveM Servers**
+**Automated MySQL database backups for FiveM servers, with compression, retention cleanup and Discord alerts**
 
-[![Author](https://img.shields.io/badge/Author-Basil%20Saji%20Mathew%20(BSM)-blue?style=for-the-badge&logo=github)](https://github.com/)
-[![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/)
+[![Author](https://img.shields.io/badge/Author-Basil%20Saji%20Mathew%20(BSM)-blue?style=for-the-badge&logo=github)](https://github.com/BASIL-SAJI-MATHEW/fivem-database-backup)
+[![Version](https://img.shields.io/badge/Version-2.0.0-success?style=for-the-badge)](https://github.com/BASIL-SAJI-MATHEW/fivem-database-backup)
 [![FiveM Ready](https://img.shields.io/badge/FiveM-Ready-orange?style=for-the-badge&logo=fivem)](https://fivem.net/)
 [![Frameworks](https://img.shields.io/badge/Frameworks-ESX%20%7C%20Qbox%20%7C%20QBCore%20%7C%20Standalone-blueviolet?style=for-the-badge)](https://fivem.net/)
 [![Discord Integration](https://img.shields.io/badge/Discord-Integrated-7289DA?style=for-the-badge&logo=discord)](https://discord.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE.md)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 Welcome to the **BSM FiveM AutoBackup V2**, developed and optimized by **Basil Saji Mathew (BSM)**. Managing a FiveM server requires ensuring that your crucial database information is protected against corruption, accidental deletion, or server crashes. This advanced automated database backup script provides peace of mind by securely backing up multi-database configurations, applying high-level compression, and sending detailed reports directly to your Discord server via Webhooks!
 
-Built specifically to be SEO-optimized and feature-rich, this script runs seamlessly on both Windows and Linux, drastically improving your server's disaster recovery strategies.
+The script runs on both Windows and Linux.
 
 ---
 
@@ -99,7 +99,7 @@ Aiming to provide the best-in-class solutions for the FiveM developer community 
 
 ## 📜 License & Copyright
 
-Distributed under the MIT License. See `LICENSE.md` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 > *Watermark: This script core and architecture is proprietary logic designed by Basil Saji Mathew (BSM).*
 
